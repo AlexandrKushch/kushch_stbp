@@ -48,7 +48,7 @@
            утворену М розбити
            на блоки M[N] де кількість блоків = M.len() / 512.
 
-   ![Результат функції calculateM()](/doc/calculateM.png)
+   ![Результат функції calculateM()](doc/calculateM.png)
 
 
 4. Підготуємо хеш значення. Для алгоритму SHA-1 вони мають константні значення.
@@ -90,11 +90,11 @@
     }
 ```
 
-![Отриманий результат calculateW()](/doc/calculateW.png)
+![Отриманий результат calculateW()](doc/calculateW.png)
 
 6. **H[0..4]** значення переписуємо у змінні **a, b, c, d, e**.
 7. Далі у циклі **t = 0 to 80** творимо магію
-   ![Алгоритм гешування](/doc/magic.png)
+   ![Алгоритм гешування](doc/magic.png)
 
 Де ROTL - циклічний сдвиг вліво, на скільки написано над буквою L.
 Також є невідома функція *f(b, c, d)*. Вона виконує наступне залежно від **t**:
@@ -215,11 +215,11 @@ abc => a9993e364706816aba3e25717850c26c9cd0d89d
 ## Перевірка з онлайн калькулятором. **http://www.sha1-online.com/**
 
 1. Спробуємо строку "abc"
-![](/doc/1.png)
+![1](doc/1.png)
 2. Спробуємо строку "abcdbcdecdefdefgefghfghighijhijkijkljklmklmnlmnomnopnopq"
-![](/doc/2.png)
+![2](doc/2.png)
 3. Спробуємо строку "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus hendrerit ligula porta
    maximus. Sed."
-![](/doc/3.png)
+![3](doc/3.png)
 4. Що до трохи більше символів? "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer luctus ante magna, id maximus libero vestibulum eget. Curabitur ullamcorper arcu quis felis fringilla congue. Morbi vitae semper odio. Sed egestas mauris iaculis orci consectetur commodo. Quisque vulputate, velit nec semper congue, elit urna hendrerit dui, pulvinar iaculis ligula dui id ligula. Cras malesuada tristique mauris, id convallis purus varius et. Phasellus dignissim ante auctor, ullamcorper quam sit amet, sagittis nulla. Donec sed lacinia nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce fringilla tortor eu velit malesuada mattis. Nam quis velit consequat, convallis urna et, lobortis ante. Nam a augue eu metus ullamcorper lacinia. Quisque sit amet ligula felis. Nullam sagittis arcu ut molestie fringilla. In ac ex porta, dictum purus a."
-![](/doc/4.png)
+![4](doc/4.png)
