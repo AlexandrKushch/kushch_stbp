@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>RSA</title>
+</head>
+<body>
+<a th:href="@{/{id}(id=${id})}">Messages</a>
+
+<div>
+    <label>N: <p th:text="${user.getN()}"></p></label>
+    <label>E: <p th:text="${user.getE()}"></p></label>
+</div>
+</body>
+</html>

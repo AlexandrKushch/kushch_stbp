@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>RSA</title>
+</head>
+<body>
+    <form method="post">
+        <label>Message</label>
+        <input type="text" name="message"/>
+        <label>E</label>
+        <input type="text" name="e" />
+        <label>N</label>
+        <input type="text" name="n" />
+        <input type="submit"/>
+    </form>
+
+    <div>
+        <div th:each="userMessage : ${usersMessages}">
+            <div th:each="user : ${userMessage}">
+                <div th:each="message : ${user.value}">
+                    <a th:href="@{'/' + ${id} + '/friendPage/' + ${user.key}}" th:text="${user.key}"></a>
+                    <span th:text="${message}" />
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
