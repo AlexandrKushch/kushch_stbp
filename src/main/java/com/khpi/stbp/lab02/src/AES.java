@@ -43,6 +43,25 @@ public class AES {
         System.out.println();
     }
 
+    public AES(byte[] key, String input) {
+        this.key = key;
+        this.input = String.format("%" + (-16 * Math.ceilDiv(input.length(), 16)) + "s", input).getBytes();
+        this.out = new byte[this.input.length];
+
+        System.out.println("KeyBytes");
+        for (int i = 0; i < this.key.length; i++) {
+            System.out.printf("%2x ", this.key[i]);
+        }
+        System.out.println();
+
+        System.out.println("Input\n" + input);
+        System.out.println("InputBytes");
+        for (int i = 0; i < this.input.length; i++) {
+            System.out.printf("%2x ", this.input[i]);
+        }
+        System.out.println();
+    }
+
     private byte[] from2dto1d(byte[][] in) {
         byte[] out = new byte[in.length * in[0].length];
         for (int i = 0; i < out.length; i++) {
